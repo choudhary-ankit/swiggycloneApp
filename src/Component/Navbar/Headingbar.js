@@ -11,7 +11,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
-import { Link, DialogTitle } from '@material-ui/core';
+import {Link} from 'react-router-dom';
 import ChildComponent from '../Home/Home_screen';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
@@ -115,7 +115,7 @@ export default class Headingbar extends Component {
                                 <AccountCircle />
                             </IconButton>
                         </div>
-                        <Link href="/Headingbar" style={{color:"white"}} underline="none">
+                        <Link to="/Headingbar" style={{color:"white", textDecoration:"none"}}>
                             <Typography variant="h6">F.O.D.I.E.S</Typography>
                         </Link>
                         <div className={Style.form}>
@@ -145,8 +145,8 @@ export default class Headingbar extends Component {
                             <div>
                                 <Dialog onClose={this.handleClose} aria-labelledby="customized-dialog-title" open={this.state.setOpen}>
                                     <div className={Style.login_modal_heading}>
-                                        <Link href="/Headingbar" underline="none">
-                                            <DialogTitle>F.O.D.I.E.S</DialogTitle>
+                                        <Link to="/Headingbar" underline="none">
+                                            <Typography variant="h6">F.O.D.I.E.S</Typography>
                                         </Link>
                                         <MuiDialogTitle>
                                             <IconButton aria-label="close" onClick={this.handleClose}>
@@ -183,8 +183,8 @@ export default class Headingbar extends Component {
                                             <div>
                                                 <Dialog onClose={this.singupClose} aria-labelledby="customized-dialog-title" open={this.state.singupOpen}>
                                                     <div className={Style.login_modal_heading}>
-                                                        <Link href="/Headingbar" underline="none">  
-                                                            <DialogTitle>F.O.D.I.E.S</DialogTitle>
+                                                        <Link to="/Headingbar" underline="none">  
+                                                            <Typography variant="h6">F.O.D.I.E.S</Typography>
                                                         </Link>
                                                         <MuiDialogTitle>
                                                             <IconButton aria-label="close" onClick={this.singupClose}>
